@@ -1,0 +1,7 @@
+<view class="container">
+  <image src="/images/posts/avatar.jpg" class="container-images"></image>
+  <text class='container_text'><text style='color:blue'>Jhze</text>的小程序之旅</text> 
+  <view class='modo_container' bindtap='onTap'>
+      <text class='container_modo'>开启小程序之旅</text>
+  </view>   
+</view>

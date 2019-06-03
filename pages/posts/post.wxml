@@ -1,0 +1,44 @@
+<import src="post_template/post-template.wxml" />
+<view>
+  <swiper indicator-dots="true" autoplay="true" interval="3000" duration="1000" style='width:100%;height:427rpx'>
+    <!-- <block wx:for="{{imgUrls}}">
+      <swiper-item>
+        <image src="{{item}}" style='width:100%;height=427rpx' />
+      </swiper-item>
+    </block> -->
+    <swiper-item>
+      <image catchtap='onSwiperTap' src="{{first1}}" data-postId="0" style='width:100%;height=427rpx' />
+    </swiper-item>
+    <swiper-item>
+      <image catchtap='onSwiperTap' src="{{first2}}" data-postId="1" style='width:100%;height=427rpx' />
+    </swiper-item>
+    <swiper-item>
+      <image catchtap='onSwiperTap' src="{{first3}}" data-postId="2" style='width:100%;height=427rpx' />
+    </swiper-item>
+
+  </swiper>
+
+  <block wx:for="{{postkey}}" wx:for-item="item">
+    <!-- data-name 自定义属性 -->
+    <view catchtap='onPostTap' data-postId="{{item.postId}}">
+      <template is="postItem" data="{{...item}}" />
+    </view>
+    <!-- <view class='post_container'>
+            <view class='post_author'>
+                  <image class='post_author_image' src='{{item.author_image}}'></image>
+                  <text class='post_text'>{{item.data}}</text>
+            </view>
+            <text class='post_title'>{{item.title}}</text>
+            <image class='post_content1_image' src='{{item.post_image}}'></image>
+            <text class='post_content1'>
+             {{item.content}}
+            </text>
+            <view class='post_content1_view'>
+                  <image class='post_collect_image' src='{{item.collect_image}}'></image>
+                  <text class='post_collect_text' class='post_content1_text'>{{item.collect_num}}</text>
+                  <image class='post_collect_image' src='{{item.view_image}}'></image>
+                  <text class='post_collect_text'>{{item.view_num}}</text>
+            </view>
+        </view> -->
+  </block>
+</view>

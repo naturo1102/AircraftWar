@@ -1,0 +1,26 @@
+<view class='detail-container'>
+  <view class='head-image'>
+    <image class='head-image-detail' src="{{isplayingmusic?postData.music.coverImgUrl:postData.headImgSrc}}"></image>
+    <image class='head-image-music' catchtap='onMusicTap' class='audio' src="{{isplayingmusic?'/images/posts/music-stop.png':'/images/posts/music-start.png'}}"></image>
+  </view>
+  <view class='author-date'>
+    <image class='avatar' src='{{postData.author_image}}'></image>
+    <text class='author'>{{postData.author}}</text>
+    <text class='const-text'>推荐于</text>
+    <text class='date'>{{postData.dateTime}}</text>
+  </view>
+  <text class='title'>{{postData.title}}</text>
+  <view class='tool'>
+    <view class='icon-image'>
+      <image wx:if="{{collected}}" catchtap='onCollectionTap' src='/images/posts/collection.png'></image>
+      <image wx:else catchtap='onCollectionTap' src='/images/posts/collection-anti.png'></image>
+      <image catchtap='onShareTap' class='share-image' src='/images/posts/share.png'></image>
+    </view>
+    <view class='horizon'>
+
+    </view>
+  </view>
+  <view>
+  <text class='detail'>{{postData.detail}}</text>
+  </view>
+</view>

@@ -1,0 +1,19 @@
+<template name="postItem">
+  <view class='post_container'>
+    <view class='post_author'>
+      <image class='post_author_image' src='{{author_image}}'></image>
+      <text class='post_text'>{{data}}</text>
+    </view>
+    <text class='post_title'>{{title}}</text>
+    <image class='post_content1_image' src='{{post_image}}'></image>
+    <text class='post_content1'>
+             {{content}}
+            </text>
+    <view class='post_content1_view'>
+      <image class='post_collect_image' src='{{collect_image}}'></image>
+      <text class='post_collect_text' class='post_content1_text'>{{collect_num}}</text>
+      <image class='post_collect_image' src='{{view_image}}'></image>
+      <text class='post_collect_text'>{{view_num}}</text>
+    </view>
+  </view>
+</template>
